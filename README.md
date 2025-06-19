@@ -1,10 +1,14 @@
 # Face Mask Detection System
 
-A comprehensive face mask detection system built with deep learning that can classify images of faces to determine mask-wearing status. The system uses transfer learning with MobileNetV2 architecture to efficiently identify whether individuals are wearing masks properly, improperly, or not at all.
+A comprehensive face mask detection system built with deep learning that can classify images of faces to determine mask-wearing status. The system uses transfer learning with MobileNetV3 architecture to efficiently identify whether individuals are wearing masks properly, improperly, or not at all.
 
 ## 🎯 Project Overview
 
 This project implements a face mask detection system using advanced deep learning techniques, particularly relevant for public health monitoring and mask compliance verification. The system provides real-time detection capabilities through an intuitive GUI interface built with Tkinter.
+
+
+
+https://github.com/user-attachments/assets/d0672342-9bea-4477-8219-08842e989da6
 
 
 
@@ -14,7 +18,7 @@ This project implements a face mask detection system using advanced deep learnin
 - **Binary Classification**: Accurately detects "with_mask" vs "without_mask" status
 - **High Performance**: Achieves 100% accuracy on test dataset
 - **Real-time Detection**: Interactive GUI for immediate image analysis
-- **Transfer Learning**: Leverages pre-trained MobileNetV2 for efficient training
+- **Transfer Learning**: Leverages pre-trained MobileNetV3 for efficient training
 - **User-friendly Interface**: Simple Tkinter-based GUI with visual feedback
 - **Robust Preprocessing**: Comprehensive data augmentation and preprocessing pipeline
 
@@ -29,9 +33,12 @@ This project implements a face mask detection system using advanced deep learnin
 
 ## 🏗️ Model Architecture
 
-### MobileNetV2 Base Architecture
+### MobileNetV3 Base Architecture
 
-The system utilizes **MobileNetV2** as the backbone network, chosen for its optimal balance between accuracy and computational efficiency.
+The system utilizes **MobileNetV3** as the backbone network, chosen for its optimal balance between accuracy and computational efficiency.
+
+![image](https://github.com/user-attachments/assets/2e0c0dfb-caf2-4cb7-b5bd-70b0762e201a)
+
 
 #### Key Components:
 
@@ -70,14 +77,15 @@ The system utilizes **MobileNetV2** as the backbone network, chosen for its opti
 ```
 Input Image → Preprocessing → Dataset Partitioning → Training/Validation/Testing
                                        ↓
-Classification ← Trained Model ← MobileNetV2 Training
+Classification ← Trained Model ← MobileNetV3 Training
 ```
+![image](https://github.com/user-attachments/assets/56857ba7-76b1-4698-89e9-2c208c47c7da)
 
 ### Processing Pipeline:
 
 1. **Data Preprocessing**: Image normalization, resizing, and augmentation
 2. **Dataset Partitioning**: Train/validation/test split for robust evaluation
-3. **Model Training**: Transfer learning with MobileNetV2 base
+3. **Model Training**: Transfer learning with MobileNetV3 base
 4. **Validation**: Performance monitoring during training
 5. **Testing**: Final model evaluation on unseen data
 6. **Classification**: Real-time prediction on new images
@@ -136,7 +144,7 @@ The system features an intuitive Tkinter-based desktop application with:
    ```
 
 3. **Download Pre-trained Model**
-   - Ensure the trained model file (`face_mask_mobilenetv2.h5`) is in the project directory
+   - Ensure the trained model file (`face_mask_mobilenetV3.h5`) is in the project directory
    - Model can be downloaded from the releases section or trained using the provided notebook
 
 ## 💻 Usage
@@ -164,7 +172,7 @@ python face_mask_detector_gui.py
 FaceMaskDetector/
 ├── face_mask_detector_gui.py    # Main GUI application
 ├── model_training.ipynb         # Training notebook
-├── face_mask_mobilenetv2.h5     # Trained model weights
+├── face_mask_mobilenetV3.h5     # Trained model weights
 ├── requirements.txt             # Project dependencies
 ├── README.md                   # Project documentation
 └── sample_images/              # Test images directory
@@ -175,7 +183,7 @@ FaceMaskDetector/
 The model training process includes:
 
 1. **Data Augmentation**: Rotation, scaling, brightness adjustment
-2. **Transfer Learning**: Fine-tuning MobileNetV2 pre-trained weights
+2. **Transfer Learning**: Fine-tuning MobileNetV3 pre-trained weights
 3. **Optimization**: Adam optimizer with learning rate scheduling
 4. **Regularization**: Dropout and batch normalization for generalization
 5. **Early Stopping**: Prevents overfitting during training
@@ -213,7 +221,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- TensorFlow team for the MobileNetV2 architecture
+- TensorFlow team for the MobileNetV3 architecture
 - Kaggle community for dataset resources and compute environment
 - OpenCV contributors for computer vision tools
 - Public health organizations inspiring this COVID-19 era project
